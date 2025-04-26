@@ -1,0 +1,143 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+nav .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Hamburger Menu (Mobile) */
+.hamburger-menu {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+#mobile-nav {
+  display: none;
+}
+
+#mobile-nav ul {
+  list-style: none;
+  padding: 10px;
+  background-color: #333;
+  margin-top: 0;
+}
+
+#mobile-nav ul li {
+  padding: 10px;
+}
+
+#mobile-nav ul li a {
+  color: white;
+  font-size: 18px;
+}
+
+/* Layout Using Flexbox */
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.container > section {
+  padding: 20px;
+  background-color: #f4f4f4;
+  margin: 10px;
+}
+
+.left, .right {
+  flex: 0 0 25%;
+}
+
+.content {
+  flex: 1;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Responsive Design with Media Queries */
+@media (max-width: 768px) {
+  /* Tablet */
+  .container {
+    flex-direction: column;
+  }
+
+  .left, .right {
+    flex: 0 0 100%;
+  }
+
+  /* Show Hamburger on Tablet */
+  .hamburger-menu {
+    display: block;
+  }
+
+  #mobile-nav {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Mobile */
+  nav ul {
+    display: none; /* Hide the normal navigation */
+  }
+
+  #mobile-nav {
+    display: block;
+  }
+
+  /* Adjust Footer */
+  footer {
+    font-size: 14px;
+  }
+}
